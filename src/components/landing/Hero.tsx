@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="absolute bottom-[10%] right-[5%] w-[400px] h-[400px] rounded-full bg-[rgba(168,85,247,0.05)] blur-[100px] animate-float-delayed" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10 pt-28 sm:pt-32 md:pt-36 pb-16 sm:pb-20 md:pb-24">
+      <div className="container mx-auto px-5 sm:px-6 md:px-8 relative z-10 pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-20 md:pb-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
@@ -58,7 +58,7 @@ const Hero = () => {
             {/* Download Buttons */}
             <motion.div
               variants={fadeUp}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mb-5"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 mb-5"
             >
               <a href="#" className="btn-ghost rounded-xl px-5 py-2.5 flex items-center gap-3 w-full sm:w-auto justify-center">
                 <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="currentColor">
@@ -96,18 +96,18 @@ const Hero = () => {
             {/* Stats Row */}
             <motion.div
               variants={fadeUp}
-              className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8"
+              className="flex items-center justify-center lg:justify-start gap-4 sm:gap-8"
             >
               {[
                 { value: "10K+", label: "Verified Truckers" },
                 { value: "500+", label: "Cities Covered" },
                 { value: "₹0", label: "Commission" },
               ].map((stat, i) => (
-                <div key={stat.label} className="flex items-center gap-6 sm:gap-8">
+                <div key={stat.label} className="flex items-center gap-4 sm:gap-8">
                   {i > 0 && <div className="w-px h-8 bg-white/[0.08]" />}
                   <div className="text-center lg:text-left">
-                    <div className="text-xl sm:text-2xl font-mono font-bold text-[var(--neon-cyan)] neon-text">{stat.value}</div>
-                    <div className="text-[var(--text-dim)] text-[10px] sm:text-[11px] mt-0.5 uppercase tracking-wider">{stat.label}</div>
+                    <div className="text-lg sm:text-2xl font-mono font-bold text-[var(--neon-cyan)] neon-text">{stat.value}</div>
+                    <div className="text-[var(--text-dim)] text-[9px] sm:text-[11px] mt-0.5 uppercase tracking-wider">{stat.label}</div>
                   </div>
                 </div>
               ))}

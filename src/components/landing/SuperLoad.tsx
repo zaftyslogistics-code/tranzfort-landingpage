@@ -79,9 +79,9 @@ const SuperLoad = () => {
               {/* Background glow */}
               <div className="absolute inset-0 rounded-3xl blur-2xl transform rotate-2 pointer-events-none" style={{ background: "linear-gradient(135deg, rgba(251,191,36,0.08), rgba(168,85,247,0.06))" }} />
 
-              {/* Floating badges */}
+              {/* Floating badges (hidden on small mobile to prevent overflow) */}
               <motion.div
-                className="absolute -top-4 -left-4 rounded-full px-3 py-1.5 flex items-center gap-1.5 text-xs font-semibold text-[var(--neon-cyan)] z-20 border"
+                className="hidden sm:flex absolute -top-4 -left-4 rounded-full px-3 py-1.5 items-center gap-1.5 text-xs font-semibold text-[var(--neon-cyan)] z-20 border"
                 style={{ background: "var(--bg-elevated)", borderColor: "rgba(0,240,255,0.2)" }}
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -91,7 +91,7 @@ const SuperLoad = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-3 -left-2 rounded-full px-3 py-1.5 flex items-center gap-1.5 text-xs font-semibold text-[var(--neon-amber)] z-20 border"
+                className="hidden sm:flex absolute -bottom-3 -left-2 rounded-full px-3 py-1.5 items-center gap-1.5 text-xs font-semibold text-[var(--neon-amber)] z-20 border"
                 style={{ background: "var(--bg-elevated)", borderColor: "rgba(251,191,36,0.2)" }}
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}

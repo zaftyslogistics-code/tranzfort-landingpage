@@ -88,7 +88,7 @@ const Testimonials = () => {
 
         {/* Testimonial Card */}
         <div className="max-w-3xl mx-auto">
-          <div className="relative">
+          <div className="relative px-0 sm:px-12 md:px-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={testimonial.id}
@@ -131,10 +131,10 @@ const Testimonials = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Arrows */}
+            {/* Desktop Navigation Arrows (hidden on mobile) */}
             <button
               onClick={prev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-14 w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/[0.08] flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--neon-cyan)] hover:border-[rgba(0,240,255,0.3)] transition-all"
+              className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 md:-translate-x-14 w-10 h-10 rounded-full border border-white/[0.08] items-center justify-center text-[var(--text-muted)] hover:text-[var(--neon-cyan)] hover:border-[rgba(0,240,255,0.3)] transition-all"
               style={{ background: "var(--bg-elevated)" }}
               aria-label="Previous testimonial"
             >
@@ -142,7 +142,7 @@ const Testimonials = () => {
             </button>
             <button
               onClick={next}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-14 w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/[0.08] flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--neon-cyan)] hover:border-[rgba(0,240,255,0.3)] transition-all"
+              className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 md:translate-x-14 w-10 h-10 rounded-full border border-white/[0.08] items-center justify-center text-[var(--text-muted)] hover:text-[var(--neon-cyan)] hover:border-[rgba(0,240,255,0.3)] transition-all"
               style={{ background: "var(--bg-elevated)" }}
               aria-label="Next testimonial"
             >
@@ -150,20 +150,40 @@ const Testimonials = () => {
             </button>
           </div>
 
-          {/* Dots */}
-          <div className="flex items-center justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrent(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === current
-                    ? "w-8 bg-[var(--neon-cyan)] shadow-[0_0_8px_var(--neon-cyan)]"
-                    : "w-2 bg-white/[0.15] hover:bg-white/[0.3]"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
+          {/* Navigation: mobile arrows + dots */}
+          <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8">
+            <button
+              onClick={prev}
+              className="sm:hidden w-10 h-10 rounded-full border border-white/[0.08] flex items-center justify-center text-[var(--text-muted)] active:text-[var(--neon-cyan)] transition-all"
+              style={{ background: "var(--bg-elevated)" }}
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={18} />
+            </button>
+
+            <div className="flex items-center justify-center gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrent(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === current
+                      ? "w-8 bg-[var(--neon-cyan)] shadow-[0_0_8px_var(--neon-cyan)]"
+                      : "w-2 bg-white/[0.15] hover:bg-white/[0.3]"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={next}
+              className="sm:hidden w-10 h-10 rounded-full border border-white/[0.08] flex items-center justify-center text-[var(--text-muted)] active:text-[var(--neon-cyan)] transition-all"
+              style={{ background: "var(--bg-elevated)" }}
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={18} />
+            </button>
           </div>
         </div>
       </div>

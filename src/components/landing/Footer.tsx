@@ -17,11 +17,11 @@ const Footer = () => {
               <h3 className="font-display font-bold text-lg sm:text-xl text-white mb-1">Stay in the loop</h3>
               <p className="text-[var(--text-muted)] text-sm">Get logistics insights and Tranzfort updates. No spam.</p>
             </div>
-            <form className="flex w-full md:w-auto gap-2">
+            <form className="flex w-full md:w-auto gap-2 min-w-0">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 md:w-72 px-4 py-2.5 rounded-xl text-white placeholder:text-[var(--text-dim)] text-sm focus:outline-none transition-colors"
+                className="flex-1 min-w-0 md:w-72 px-3 sm:px-4 py-2.5 rounded-xl text-white placeholder:text-[var(--text-dim)] text-sm focus:outline-none transition-colors"
                 style={{ background: "var(--bg-tertiary)", border: "1px solid rgba(255,255,255,0.08)" }}
                 onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(0,240,255,0.3)"; e.currentTarget.style.boxShadow = "0 0 15px rgba(0,240,255,0.08)"; }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.boxShadow = "none"; }}
@@ -40,13 +40,12 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-12 sm:mb-14">
           {/* Logo & Tagline */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center mb-4">
               <img
                 src={logo}
                 alt="Tranzfort Logo"
-                className="h-8 sm:h-10 brightness-0 invert"
+                className="h-9 sm:h-10 brightness-0 invert"
               />
-              <span className="font-display font-bold text-lg sm:text-xl">Tranzfort</span>
             </div>
             <p className="text-[var(--text-muted)] text-sm mb-6 leading-relaxed">
               India's most trusted logistics marketplace. Connecting suppliers and truckers with zero commission.

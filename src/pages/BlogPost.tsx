@@ -158,7 +158,7 @@ const BlogPost = () => {
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, var(--bg-primary), var(--bg-primary)/50, transparent)" }} />
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 -mt-28 sm:-mt-32 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 -mt-16 sm:-mt-24 md:-mt-28 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

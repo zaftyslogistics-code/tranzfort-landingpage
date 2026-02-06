@@ -106,6 +106,8 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -114,6 +116,20 @@
     background-color: var(--bg-primary);
     color: var(--text-secondary);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure minimum tap target size on mobile */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Exception for inline links and small UI elements */
+  p a, li a, span a, .text-sm a, .text-xs a {
+    min-height: auto;
+    min-width: auto;
   }
 
   h1, h2, h3 {
