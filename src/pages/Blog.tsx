@@ -37,21 +37,20 @@ const Blog = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-12 overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
+      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
         <div className="absolute inset-0 dot-grid-bg grid-fade pointer-events-none" />
         <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-2xl mx-auto"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-3">
               Insights & <span className="text-neon-gradient">Updates</span>
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[var(--text-muted)]">
-              Stay informed with the latest news, tips, and insights from the
-              logistics and transport industry.
+            <p className="text-sm sm:text-base text-[var(--text-muted)]">
+              Latest news, tips, and insights from the logistics and transport industry.
             </p>
           </motion.div>
         </div>

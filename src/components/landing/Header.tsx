@@ -79,15 +79,12 @@ const Header = () => {
       >
         <div className="container mx-auto px-3 sm:px-4 md:px-6 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center group">
             <img
               src={logo}
               alt="Tranzfort Logo"
-              className="h-8 sm:h-9 md:h-10 transition-transform duration-300 group-hover:scale-105 brightness-0 invert"
+              className="h-9 sm:h-10 md:h-11 transition-transform duration-300 group-hover:scale-105 brightness-0 invert"
             />
-            <span className="font-display font-bold text-base sm:text-lg md:text-xl tracking-tight text-white">
-              Tranzfort
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

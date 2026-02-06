@@ -149,7 +149,7 @@ const BlogPost = () => {
 
       {/* Hero Section */}
       <section className="relative pt-24">
-        <div className="h-[40vh] sm:h-[50vh] md:h-[60vh] relative overflow-hidden">
+        <div className="h-[25vh] sm:h-[30vh] md:h-[35vh] relative overflow-hidden">
           <img
             src={blog.coverImage}
             alt={blog.title}
