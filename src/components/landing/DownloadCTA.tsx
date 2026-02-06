@@ -68,7 +68,7 @@ const DownloadCTA = () => {
 
             <motion.div variants={fadeUp} className="flex items-center justify-center gap-2">
               <a
-                href="/tranzfort.apk"
+                href="/app-release.apk"
                 download
                 className="text-[var(--text-muted)] hover:text-[var(--neon-cyan)] underline underline-offset-4 flex items-center gap-2 text-sm font-medium transition-colors"
               >

@@ -82,7 +82,7 @@ const Hero = () => {
 
             {/* Direct APK */}
             <motion.div variants={fadeUp} className="flex items-center justify-center lg:justify-start gap-3 text-xs mb-10">
-              <a href="/tranzfort.apk" download className="text-[var(--text-muted)] hover:text-[var(--neon-cyan)] underline underline-offset-4 flex items-center gap-1.5 font-medium transition-colors">
+              <a href="/app-release.apk" download className="text-[var(--text-muted)] hover:text-[var(--neon-cyan)] underline underline-offset-4 flex items-center gap-1.5 font-medium transition-colors">
                 <Download size={12} />
                 Direct APK (v1.1)
               </a>
